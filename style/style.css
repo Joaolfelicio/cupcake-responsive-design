@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+*:not(input) {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #2a8878;
+    color: #feebda;
+    font-family: 'Bitter', serif;
+    font-style: italic;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cookie', cursive;
+}
+
+/* NAV STYLE */
+
+nav {
+    padding: 10px;
+    background-color: #0c7973;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+nav i {
+    color: #feebda;
+}
+
+nav input {
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+    background-color: #2a8878;
+    color: #feebda;
+    border: 0;
+    height: 25px;
+}
+
+nav input::placeholder {
+    color: #feebda;
+}
+
+#nav-2 {
+    background-color: #feebda;
+    height: 40px;
+    display: none;
+}
+
+.icon {
+    display: none;
+}
+
+#nav-2 ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    height: 100%;
+}
+
+#nav-2 a {
+    text-decoration: none;
+    color: rgb(255, 110, 110);
+    font-weight: 600;
+}
+
+/* END NAV STYLE */
+
+/* INTRODUCTION STYLE */
+
+main {
+    text-align: center;
+}
+
+main #logo {
+    margin-top: 25px;
+}
+
+main a[href="igor-marty.com"] {
+    text-decoration: none;
+    color: #e782a4;
+}
+
+main h1 {
+    font-size: 54px;
+    font-weight: 600;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+main p {
+    font-size: 26px;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+/* END INTRODUCTION STYLE */
+
+/* YUMMIES PARTTTTTTTTTTTTTTTTTTTTTTTT */
+
+#yummies {
+    margin-top: 40px;
+    font-size: 48px;
+}
+
+section {
+    margin: 15px auto;
+    width: 95%;
+}
+
+section p {
+    font-size: 22px;
+}
+
+article {
+    background-color: #feebda;
+    color: #e782a4;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+.yummies-article h3 {
+    margin: 0 auto;
+    width: 85%;
+    padding-top: 40px;
+    font-size: 32px;
+    border-bottom: 1px dashed #e782a4;
+}
+
+.yummies-article p {
+    padding: 0px 15px 15px 15px;
+}
+
+/* END YUMMIES PARTTTTTTTTTTTTTTTTTTTTT */
+
+/* FOOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+
+footer h3 {
+    margin: 0 auto;
+    color: white;
+    background-color: #805e69;
+    width: 95%;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    font-weight: normal;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 15px;
+}
+
+/* END FOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+
+/* MEDIA QUERIESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */
+
+
+/* TABLET MOD */
+@media screen and (min-width: 800px) {
+    nav a {
+        display: none;
+    }
+    nav input {
+        margin: 0 auto;
+    }
+    #nav-2 {
+        display: block;
+    }
+    #introduction {
+        margin: 0px 15px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 20px;
+    }
+    #logo {
+        height: 80%;
+    }
+    #text {
+        text-align: left;
+    }
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    article {
+        margin: 15px;
+        width: 40%;
+    }
+}
+
+/* DESKTOP MOD */
+@media screen and (min-width: 1200px) {
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav input {
+        margin: 0;
+        width: 300px;
+     }
+
+     #logo {
+         position: absolute;
+         width: 100px;
+         height: 100px;
+         top: -10px;
+         left: 30px;
+        
+     }
+
+     #nav-2 ul {
+         justify-content: flex-end;
+     }
+     #nav-2 a {
+         margin: 0% 50px;
+     }
+
+     #text {
+        width: 60%;
+        margin: 0 auto;
+     }
+
+     main h1 {
+        margin-bottom: 30px;
+     }
+
+
+     #text p {
+        column-count: 2;
+        margin: 5px;
+     }
+
+     section {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+     }
+
+     .yummies-article:first-of-type {
+         margin-left: 0px;
+     }
+
+     .yummies-article:last-of-type {
+        margin-right: 0px;
+    }
+
+     #yummies {
+         margin-bottom: 50px;
+     }
+
+     article {
+         width: 100%;
+         position: relative;
+     }
+
+     .icon {
+         display: block;
+         position: absolute;
+         bottom: 95%;
+         left: 46%;
+     }
+}
